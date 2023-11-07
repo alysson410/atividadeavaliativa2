@@ -54,7 +54,7 @@ printf("%s: %.2f de forca\n", time2, forca_time2);
 
 if(forca_time1 > forca_time2){
     printf("%s eh mais forte\n", time1);
-}else if(forca_time1 < forca_time2){
+}else(forca_time1 < forca_time2){
     printf("%s eh mais forte\n", time2);
 }
 
