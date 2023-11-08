@@ -6,55 +6,55 @@ int main(){
 int jogador[31];
 int time1[31], time2[31];
 char posicao;
-float forca;
-float forca_time1 = 0 / 100, forca_time2 = 0 / 100;
+double forca;
+double forca_time1 = 0 , forca_time2 = 0;
 
-scanf("%s", time1);
+scanf("%30[^\n]", time1);
 
 for(int i = 0; i < 11; i++){
-scanf("%s %c %f", jogador, &posicao, &forca);
+scanf(" %30[^;];%c;%lf", jogador, &posicao, &forca);
 
-if(posicao == 'g'){
+if(posicao == 'G'){
     forca_time1 += 8 * forca;
-}else if(posicao == 'l'){
+}else if(posicao == 'L'){
     forca_time1 += 10 * forca;
-}else if(posicao == 'z'){
+}else if(posicao == 'Z'){
     forca_time1 += 5 * forca;
-}else if(posicao == 'v'){
+}else if(posicao == 'V'){
     forca_time1 += 8 * forca;
-}else if(posicao == 'm'){
+}else if(posicao == 'M'){
     forca_time1 += 11 * forca;
-}else if(posicao == 'a'){
+}else if(posicao == 'A'){
     forca_time1 += 12 * forca;
 }
 
 }
 
-scanf("%s", time2);
+scanf(" %30[^\n]", time2);
 
 for(int i = 0; i < 11; i++){
-scanf("%s %c %f", jogador, &posicao, &forca);
+scanf(" %30[^;];%c;%lf", jogador, &posicao, &forca);
 
-if(posicao == 'g'){
+if(posicao == 'G'){
     forca_time2 += 8 * forca;
-}else if(posicao == 'l'){
+}else if(posicao == 'L'){
     forca_time2 += 10 * forca;
-}else if(posicao == 'z'){
+}else if(posicao == 'Z'){
     forca_time2 += 5 * forca;
-}else if(posicao == 'v'){
+}else if(posicao == 'V'){
     forca_time2 += 8 * forca;
-}else if(posicao == 'm'){
+}else if(posicao == 'M'){
     forca_time2 += 11 * forca;
-}else if(posicao == 'a'){
+}else if(posicao == 'A'){
     forca_time2 += 12 * forca;
 }
 
-}printf("%s: %.2f de forca\n", time1, forca_time1);
-printf("%s: %.2f de forca\n", time2, forca_time2);
+}printf("%s: %.2lf de forca\n", time1, forca_time1/100);
+printf("%s: %.2lf de forca\n", time2, forca_time2/100);
 
 if(forca_time1 > forca_time2){
     printf("%s eh mais forte\n", time1);
-}else(forca_time1 < forca_time2){
+}else if(forca_time1 < forca_time2){
     printf("%s eh mais forte\n", time2);
 }
 
